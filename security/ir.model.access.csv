@@ -1,0 +1,2 @@
+access_crm_lead_user,crm.lead user,model_crm_lead,base.group_user,1,1,1,1
+access_crm_lead_user,crm.lead.checklist user,model_crm_lead_checklist,base.group_user,1,1,1,1
