@@ -13,6 +13,7 @@ class CrmLead(models.Model):
 
     checklist_ids = fields.One2many('crm.lead.checklist', 'lead_id', string="Checkliste")
     checklist_progress = fields.Float(string="Checklisten-Fortschritt", compute="_compute_checklist_progress")
+    access_crm_lead_checklist_user = fields.Many2one('res.users', string="Assigned User")
 
     @api.depends('checklist_ids.is_done')
     def _compute_checklist_progress(self):
