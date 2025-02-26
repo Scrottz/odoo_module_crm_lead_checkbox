@@ -1,0 +1,11 @@
+class CrmLeadChecklist(models.Model):
+    _name = 'crm.lead.checklist'
+    _description = "CRM Lead Checklist"
+
+    lead_id = fields.Many2one(
+        'crm.lead',
+        string="Lead",
+        ondelete="cascade"
+    )
+    name = fields.Char(string="Aufgabe", required=True)
+    is_done = fields.Boolean(string="Erledigt", default=False)
